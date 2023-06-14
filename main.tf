@@ -18,7 +18,7 @@ provider "aws" {
   instance_type = "t2.micro"
 }  */
 
-/* //Create VPC
+//Create VPC
 resource "aws_vpc" "main" {
   cidr_block = "10.1.0.0/16"
   tags = {
@@ -52,6 +52,6 @@ resource "aws_subnet" "database" {
   tags = {
     Name = "database"
   }
-} */
+}
 
  
