@@ -36,4 +36,22 @@ resource "aws_subnet" "main" {
   }
 }
 
+resource "aws_subnet" "main" {
+  vpc_id     = aws_vpc.main.id
+  cidr_block = "10.1.2.0/24"
+
+  tags = {
+    Name = "app"
+  }
+}
+
+resource "aws_subnet" "main" {
+  vpc_id     = aws_vpc.main.id
+  cidr_block = "10.1.3.0/24"
+
+  tags = {
+    Name = "database"
+  }
+}
+
  
