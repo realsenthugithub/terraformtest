@@ -18,7 +18,7 @@ provider "aws" {
   instance_type = "t2.micro"
 }  */
 
-//Create VPC
+/* //Create VPC
 resource "aws_vpc" "main" {
   cidr_block = "10.1.0.0/16"
   tags = {
@@ -27,7 +27,7 @@ resource "aws_vpc" "main" {
 }
 
 //Create subnet for web, app and database tier
-resource "aws_subnet" "main" {
+resource "aws_subnet" "web" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.1.1.0/24"
 
@@ -52,6 +52,6 @@ resource "aws_subnet" "database" {
   tags = {
     Name = "database"
   }
-}
+} */
 
  
