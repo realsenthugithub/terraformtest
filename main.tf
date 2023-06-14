@@ -36,7 +36,7 @@ resource "aws_subnet" "main" {
   }
 }
 
-resource "aws_subnet" "main" {
+resource "aws_subnet" "app" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.1.2.0/24"
 
@@ -45,7 +45,7 @@ resource "aws_subnet" "main" {
   }
 }
 
-resource "aws_subnet" "main" {
+resource "aws_subnet" "database" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.1.3.0/24"
 
