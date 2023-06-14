@@ -26,9 +26,9 @@ resource "aws_vpc" "main" {
   }
 }
 
-/* //Create subnet for web, app and database tier
-resource "aws_subnet" "terraformvpc" {
-  vpc_id     = terraformvpc.main.id
+//Create subnet for web, app and database tier
+resource "aws_subnet" "main" {
+  vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.1.0/24"
 
   tags = {
@@ -36,20 +36,4 @@ resource "aws_subnet" "terraformvpc" {
   }
 }
 
-resource "aws_subnet" "app" {
-  vpc_id     = terraformvpc.main.id
-  cidr_block = "10.0.1.0/24"
 
-  tags = {
-    Name = "app"
-  }
-}
-
-resource "aws_subnet" "database" {
-  vpc_id     = terraformvpc.main.id
-  cidr_block = "10.0.1.0/24"
-
-  tags = {
-    Name = "database"
-  }
-} */
