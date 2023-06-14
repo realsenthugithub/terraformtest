@@ -17,3 +17,7 @@ provider "aws" {
   ami           = "ami-0c94855ba95c71c99"
   instance_type = "t2.micro"
 }  */
+
+resource "aws_vpc" "terraformvpc" {
+  cidr_block = "10.1.0.0/16"
+}
