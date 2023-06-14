@@ -18,6 +18,35 @@ provider "aws" {
   instance_type = "t2.micro"
 }  */
 
+//Create VPC
 resource "aws_vpc" "terraformvpc" {
   cidr_block = "10.1.0.0/16"
+}
+
+//Create subnet for web, app and database tier
+resource "aws_subnet" "web" {
+  vpc_id     = aws_vpc.main.id
+  cidr_block = "10.0.1.0/24"
+
+  tags = {
+    Name = "web"
+  }
+}
+
+resource "aws_subnet" "app" {
+  vpc_id     = aws_vpc.main.id
+  cidr_block = "10.0.1.0/24"
+
+  tags = {
+    Name = "app"
+  }
+}
+
+resource "aws_subnet" "database" {
+  vpc_id     = aws_vpc.main.id
+  cidr_block = "10.0.1.0/24"
+
+  tags = {
+    Name = "database"
+  }
 }
