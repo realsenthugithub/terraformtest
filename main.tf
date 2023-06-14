@@ -19,12 +19,15 @@ provider "aws" {
 }  */
 
 //Create VPC
-resource "aws_vpc" "terraformvpc" {
+resource "aws_vpc" "main" {
   cidr_block = "10.1.0.0/16"
+  tags = {
+    Name = "terraformvpc"
+  }
 }
 
-//Create subnet for web, app and database tier
-resource "aws_subnet" "web" {
+/* //Create subnet for web, app and database tier
+resource "aws_subnet" "terraformvpc" {
   vpc_id     = terraformvpc.main.id
   cidr_block = "10.0.1.0/24"
 
@@ -49,4 +52,4 @@ resource "aws_subnet" "database" {
   tags = {
     Name = "database"
   }
-}
+} */
