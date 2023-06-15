@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"my_vpc","Source":"./modules/vpc","Dir":"modules/vpc"}]}
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"AWS Infra","Source":"./modules","Dir":"modules"},{"Key":"AWSInfra","Source":"./modules","Dir":"modules"},{"Key":"my_ec2","Source":"./modules/ec2","Dir":"modules/ec2"},{"Key":"my_vpc","Source":"./modules/vpc","Dir":"modules/vpc"}]}
