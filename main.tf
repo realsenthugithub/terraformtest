@@ -2,14 +2,14 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.65"
+      #version = "~> 4.65"
     }
   }
 }
 
 provider "aws" {
-  access_key = "AKIAYA63NFZAM3GCSUFQ"
-  secret_key = "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"
+  access_key = "Key"
+  secret_key = "SK"
   region = "us-east-1"
 }
 
